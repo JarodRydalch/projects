@@ -16,7 +16,7 @@ request_counter = 0 #used to count the number of requests so I dont get rate lim
 append_counter = 0 #used to count requests for appending function to avoid rate limiting
 def first_get_data():# Defines function to get data first
     request_counter = 0 #used to count the number of requests so I dont get rate limited
-    tickers = ["AAPL" , "ADBE" , "ATVI" , "COIN" , "GM" , "GOOG" , "MSFT",  "PARA" , "PFE" , "TSLA"] #Replace with any ticker(s)
+    tickers = ["AAPL" , "ADBE" , "ATVI" , "COIN" , "GM" , "GOOG" , "MSFT",  "PARA" , "PFE" , "TSLA"] #Replace with desired ticker(s)
     ticker = '' #sets ticker to an empty string value
     for ticker in tickers:
         url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol="+ticker+"&apikey=JRZEJSHUUVG1FPAH&outputsize=full&datatype=json&start_date=2022-04-11&end_date=2023-04-11" #api url
@@ -54,7 +54,7 @@ def first_get_data():# Defines function to get data first
     
 def append_data(): #defines function to append or add new data
     append_counter = 0 #used to count requests for appending function to avoid rate limiting
-    tickers = ["AAPL" , "ADBE" , "ATVI"]# , "COIN" , "GM" , "GOOG" , "MSFT" , "PARA" , "PFE" , "TSLA"]
+    tickers = ["AAPL" , "ADBE" , "ATVI" , "COIN" , "GM" , "GOOG" , "MSFT" , "PARA" , "PFE" , "TSLA"]
     ticker = "" #empty string ticker
     for ticker in tickers:
         last_date = open("/home/ubuntu/environment/FinalProject/"+ticker+".csv").readlines()[-1].split(",")[0] #sets the last date of data available
