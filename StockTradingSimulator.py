@@ -6,6 +6,7 @@
 #Profit, returns, and best performing strategies are tracked. 
 #Results are then output in json format. 
 #NOTE: If wanting to analyze more than 10 different stocks, program will need modified to avoid rate limiting. 
+#None of this is or should be considered financial advice. I am not a financial advisor and the program is simply an analysis/simulation tool. 
 
 
 import json
